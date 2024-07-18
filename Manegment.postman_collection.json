@@ -1,0 +1,835 @@
+{
+	"info": {
+		"_postman_id": "3f5c0739-77e3-49bb-a593-e7da4fda73d6",
+		"name": "Edara zoz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26745753",
+		"_collection_link": "https://planetary-comet-508731.postman.co/workspace/New-Team-Workspace~40767f04-612b-4556-9520-ee3045516d42/collection/26745753-3f5c0739-77e3-49bb-a593-e7da4fda73d6?action=share&creator=26745753&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "supervisor",
+			"item": [
+				{
+					"name": "show products assigned to sup",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "73b6de83e84f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/showProducts/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"showProducts",
+								"3"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "zaid",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "73b6de83e84f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"ProductID\" : \"1\",\r\n\"quantity\" : \"12321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/CreateRequest/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"CreateRequest",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show req of super",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "70bc3fa97a6bdc8c1e707a962ac803d3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/showHistoryOfRequests/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"showHistoryOfRequests",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show warehouse related to supervisor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "73b6de83e84f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/showProducts//GETWHINFO/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"showProducts",
+								"",
+								"GETWHINFO",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "manage supervisor",
+					"item": [
+						{
+							"name": "Create supervisor",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "   {\r\n        \"Email\": \"tasstosaa@gmail.com\",\r\n        \"Phone\": \"01203755555203\",\r\n        \"Password\": \"12345678910\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Supervisors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Supervisors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete supervisor",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/Supervisors/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Supervisors",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show specific supervisors or all supervisors",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Supervisors?search=batool",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Supervisors"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "batool"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update supervisor",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\": \"ziaddddd@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Supervisors/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Supervisors",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "manage warehouse",
+					"item": [
+						{
+							"name": "Create warehouse",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "   {\r\n        \"Name\": \"hcom\",\r\n        \"Location\":\"hdhdhd\",\r\n        \"Capacity\":\"15523\",\r\n        \"Supervisor_ID\" :\"11\"\r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/warehouse",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"warehouse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update  warehouse",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n        \"Name\": \"hhhhcom\"\r\n        // \"Location\":\"hdhdhd\",\r\n        // \"Capacity\":\"15523\",\r\n        // \"Supervisor_ID\" :\"4\"\r\n\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Warehouse/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Warehouse",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List  warehouse",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/warehouse/?Search=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"warehouse",
+										""
+									],
+									"query": [
+										{
+											"key": "Search",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete  warehouse",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/warehouse/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"warehouse",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product per warehouse",
+					"item": [
+						{
+							"name": "Create product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "hdhdd",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "gfgfghf",
+											"type": "text"
+										},
+										{
+											"key": "Photo",
+											"type": "file",
+											"src": "/D:/Batool/Downloads/MAKEUP_2023040814585465.jpg"
+										},
+										{
+											"key": "Stock",
+											"value": "13",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/Products/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Products",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update  product",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "batool 123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "Description",
+											"value": "shreifvf",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "Photo",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "NewwarehouseID",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/Products/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Products",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List  product",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "search",
+											"value": "gsgs",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/Products/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Products",
+										"3"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "zaid",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete  product",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/Products/21",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Products",
+										"21"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search for a product in warehouse",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Search",
+											"value": "ahmed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/Products/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all products for admin",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Token",
+										"value": "8e6ce1ee341b",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/Products/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Products",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "RequestsHistory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "8e6ce1ee341b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/RequestsHistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"RequestsHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StockRequests",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"value": "8e6ce1ee341b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"Action\": \"approved\"\r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/StockRequests/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"StockRequests",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"Email\": \"tasstosaa@gmail.com\",\r\n        \"Password\": \"123456789\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Password\": \"sadasdas\",\r\n\"Email\": \"bartorrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrroll@gmail.com\" ,\r\n\"Phone\": \"34534535345\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
